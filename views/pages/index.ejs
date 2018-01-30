@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<% include ../partials/head %>
+</head>
+
+<body>
+
+<header>
+	<% include ../partials/header %>
+</header>
+
+<main>
+	
+	<div id="live-selected-container">
+        <div class="selected-ico-btn">
+            <img src="/public/assets/live-ico.svg">
+        </div>
+    </div>
+    <div id="upcoming-selected-container">
+        <div class="unselected-ico-btn">
+            <img src="/public/assets/upcoming-ico.svg">
+        </div>
+    </div>
+
+    <div id="about-container">
+        <div id="about-text">
+            <h3> Welcome to Hub! </h3>
+            <p> With Hub, you can discover the latest in ICO oppurtunities all around the Cryptocurrency world. Since the ICO data on the lists are updated daily,</p>
+            <p>Hub allows you to stay up to date with all of the current and upcoming ICO launches around the globe.</p>
+
+        </div>
+    </div>
+
+    <div id="live-ico-list" class="ico-container">
+
+        <div class="list-title-hide ico-box ico-alt-box">
+            <div class="ico-name" id="ico-name-title">Name</div>
+            <div class="ico-description" id="ico-end-title">Description</div>
+            <div class="ico-end" id="ico-end-title">Ends</div>
+        </div>
+
+       
+            <% for(let i = 0; i < ico.live.length; i++) { %>
+                <% if (i % 2 === 0) { %>
+                <div class="ico-box"> 
+                    <div class="ico-img">
+                       <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
+                    </div>
+                    <div class="ico-name">
+                         <%= ico.live[i].name %> 
+                    </div>
+                    <div class="ico-description">
+                         <%= ico.live[i].description %> 
+                    </div>
+                    <div class="ico-end">
+                         <%= ico.live[i].end_time %> 
+                    </div>
+                </div>
+                <% } else { %> 
+                 <div class="ico-box ico-alt-box"> 
+                    <div class="ico-img">
+                        <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
+                    </div>
+                    <div class="ico-name">
+                         <%= ico.live[i].name %> 
+                    </div>
+                    <div class="ico-description">
+                         <%= ico.live[i].description %> 
+                    </div>
+                    <div class="ico-end">
+                         <%= ico.live[i].end_time %> 
+                    </div>
+                </div> 
+            <% } %>
+            <% } %>
+         
+
+    </div>
+
+    <div id="upcoming-ico-list" class="ico-container">
+
+        <div class="list-title-hide ico-box ico-alt-box">
+            <div class="ico-name" id="ico-name-title">Name</div>
+            <div class="ico-description" id="ico-end-title">Description</div>
+            <div class="ico-end" id="ico-end-title">Starts</div>
+        </div>
+
+       
+            <% for(let i = 0; i < ico.upcoming.length; i++) { %>
+                <% if (i % 2 === 0) { %>
+                <div class="ico-box"> 
+                    <div class="ico-img">
+                         <a target="_blank" href="<%= ico.upcoming[i].website_link %>"> <img src="<%= ico.upcoming[i].image %>"> </a>
+                    </div>
+                    <div class="ico-name">
+                         <%= ico.upcoming[i].name %> 
+                    </div>
+                    <div class="ico-description">
+                         <%= ico.upcoming[i].description %> 
+                    </div>
+                    <div class="ico-end">
+                         <%= ico.upcoming[i].start_time %> 
+                    </div>
+                </div>
+                <% } else { %> 
+                 <div class="ico-box ico-alt-box"> 
+                    <div class="ico-img">
+                         <a target="_blank" href="<%= ico.upcoming[i].website_link %>"> <img src="<%= ico.upcoming[i].image %>"> </a>
+                    </div>
+                    <div class="ico-name">
+                         <%= ico.upcoming[i].name %> 
+                    </div>
+                    <div class="ico-description">
+                         <%= ico.upcoming[i].description %> 
+                    </div>
+                    <div class="ico-end">
+                         <%= ico.upcoming[i].start_time %> 
+                    </div>
+                </div> 
+            <% } %>
+            <% } %>
+         
+
+    </div>
+   
+
+</main>
+
+<footer>
+
+	<% include ../partials/footer %>
+
+</footer>
+
+</body>
+</html>

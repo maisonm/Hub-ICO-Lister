@@ -1,0 +1,26 @@
+{
+  "name": "hub_ico",
+  "version": "1.0.0",
+  "description": "Hub is a quick and easy way to view current and upcoming Initial Coin Offerings (ICO's).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maisonm/hub_ico.git"
+  },
+  "author": "Maison Moa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maisonm/hub_ico/issues"
+  },
+  "homepage": "https://github.com/maisonm/hub_ico#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
+    "router": "^1.3.2"
+  }
+}
