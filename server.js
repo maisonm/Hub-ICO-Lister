@@ -20,5 +20,6 @@ app.get('/', function(req, res, next) {
 
 app.use('/public', express.static('public'));
 
-app.listen(port);
-console.log('Magic is churning on ' + port);
+app.listen(process.env.PORT || port, () => {
+    console.log('listening on: " + this.address().port);
+});
