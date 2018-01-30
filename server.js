@@ -20,6 +20,4 @@ app.get('/', function(req, res, next) {
 
 app.use('/public', express.static('public'));
 
-app.listen(process.env.PORT || port, () => {
-    console.log("listening on: " + this.address().port);
-});
+app.listen(process.env.PORT || port);
