@@ -33,45 +33,62 @@
     </div>
 
     <div id="live-ico-list" class="ico-container">
-
-        <div class="list-title-hide ico-box ico-alt-box">
-            <div class="ico-name" id="ico-name-title">Name</div>
-            <div class="ico-description" id="ico-end-title">Description</div>
-            <div class="ico-end" id="ico-end-title">Ends</div>
-        </div>
-
        
             <% for(let i = 0; i < ico.live.length; i++) { %>
                 <% if (i % 2 === 0) { %>
                 <div class="ico-box"> 
-                    <div class="ico-img">
+                    <div>
                        <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
                     </div>
-                    <div class="ico-name">
-                         <%= ico.live[i].name %> 
+                    <div>
+                        <span class="identifier">
+                           <p> Name: </p>
+                        </span>
+                         <p> <%= ico.live[i].name %> </p>
+                        
                     </div>
-                    <div class="ico-description">
-                         <%= ico.live[i].description %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Description: </p>
+                        </span>
+                        <p class="ico-description"> <%= ico.live[i].description %> </p>
                     </div>
-                    <div class="ico-end">
-                         <%= ico.live[i].end_time %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Ending: </p>
+                        </span>
+                      
+                        <p>  <%= ico.live[i].end_time %> </p>
+                
                     </div>
                 </div>
                 <% } else { %> 
                  <div class="ico-box ico-alt-box"> 
-                    <div class="ico-img">
-                        <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
+                    <div>
+                       <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
                     </div>
-                    <div class="ico-name">
-                         <%= ico.live[i].name %> 
+                    <div>
+                        <span class="identifier">
+                           <p> Name: </p>
+                        </span>
+                         <p> <%= ico.live[i].name %> </p>
+                        
                     </div>
-                    <div class="ico-description">
-                         <%= ico.live[i].description %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Description: </p>
+                        </span>
+                        <p class="ico-description"> <%= ico.live[i].description %> </p>
                     </div>
-                    <div class="ico-end">
-                         <%= ico.live[i].end_time %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Ending: </p>
+                        </span>
+                      
+                        <p>  <%= ico.live[i].end_time %> </p>
+                
                     </div>
-                </div> 
+                </div>
             <% } %>
             <% } %>
          
@@ -79,45 +96,62 @@
     </div>
 
     <div id="upcoming-ico-list" class="ico-container">
-
-        <div class="list-title-hide ico-box ico-alt-box">
-            <div class="ico-name" id="ico-name-title">Name</div>
-            <div class="ico-description" id="ico-end-title">Description</div>
-            <div class="ico-end" id="ico-end-title">Starts</div>
-        </div>
-
        
             <% for(let i = 0; i < ico.upcoming.length; i++) { %>
                 <% if (i % 2 === 0) { %>
                 <div class="ico-box"> 
-                    <div class="ico-img">
-                         <a target="_blank" href="<%= ico.upcoming[i].website_link %>"> <img src="<%= ico.upcoming[i].image %>"> </a>
+                    <div>
+                       <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
                     </div>
-                    <div class="ico-name">
-                         <%= ico.upcoming[i].name %> 
+                    <div>
+                        <span class="identifier">
+                           <p> Name: </p>
+                        </span>
+                         <p> <%= ico.live[i].name %> </p>
+                        
                     </div>
-                    <div class="ico-description">
-                         <%= ico.upcoming[i].description %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Description: </p>
+                        </span>
+                        <p class="ico-description"> <%= ico.live[i].description %> </p>
                     </div>
-                    <div class="ico-end">
-                         <%= ico.upcoming[i].start_time %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Starting: </p>
+                        </span>
+                      
+                        <p>  <%= ico.live[i].start_time %> </p>
+                
                     </div>
                 </div>
                 <% } else { %> 
                  <div class="ico-box ico-alt-box"> 
-                    <div class="ico-img">
-                         <a target="_blank" href="<%= ico.upcoming[i].website_link %>"> <img src="<%= ico.upcoming[i].image %>"> </a>
+                    <div>
+                       <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
                     </div>
-                    <div class="ico-name">
-                         <%= ico.upcoming[i].name %> 
+                    <div>
+                        <span class="identifier">
+                           <p> Name: </p>
+                        </span>
+                         <p> <%= ico.live[i].name %> </p>
+                        
                     </div>
-                    <div class="ico-description">
-                         <%= ico.upcoming[i].description %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Description: </p>
+                        </span>
+                        <p class="ico-description"> <%= ico.live[i].description %> </p>
                     </div>
-                    <div class="ico-end">
-                         <%= ico.upcoming[i].start_time %> 
+                    <div>
+                        <span class="identifier">
+                            <p> Starting: </p>
+                        </span>
+                      
+                        <p>  <%= ico.live[i].start_time %> </p>
+                
                     </div>
-                </div> 
+                </div>
             <% } %>
             <% } %>
          

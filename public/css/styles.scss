@@ -1,7 +1,6 @@
 $main-font-color:#595959;
  $dark-font-color:#5e6164;
  $super-dark-font-color:#333333;
-/* Why the super-hell not? lmao*/
  $red-warning:#FF686B;
  $green-ok:#0CF574;
  $sub-header-bg-color:#e0e0e0;
@@ -27,12 +26,11 @@ $main-font-color:#595959;
  button {
      outline: none;
 }
+
+// NAVBAR HEADER BEGIN
+
  #header-container {
-     display: -webkit-box;
-     display: -ms-flexbox;
      display: flex;
-     -webkit-box-pack: justify;
-     -ms-flex-pack: justify;
      justify-content: space-between;
      padding: 10px;
      height: 70px;
@@ -44,8 +42,6 @@ $main-font-color:#595959;
      -webkit-box-shadow: 2px 0 4px $dark-font-color;
      box-shadow: 2px 0 4px $dark-font-color;
      #logo-container {
-         display: -webkit-box;
-         display: -ms-flexbox;
          display: flex;
          padding-left: 20px;
          p {
@@ -56,8 +52,7 @@ $main-font-color:#595959;
         }
     }
      #buttons-right {
-         display: -webkit-box;
-         display: -ms-flexbox;
+
          display: flex;
          padding-top: 6px;
          padding-right: 25px;
@@ -125,13 +120,11 @@ $main-font-color:#595959;
         }
     }
 }
+// DROPDOWN SUBHEADER 
  #live-selected-container {
-     display: -webkit-box;
-     display: -ms-flexbox;
+
      display: flex;
      position: fixed;
-     -webkit-box-pack: center;
-     -ms-flex-pack: center;
      justify-content: center;
      top: 0px;
      width: 100%;
@@ -142,13 +135,10 @@ $main-font-color:#595959;
      -webkit-box-shadow: 2px 0 4px $box-glow;
      box-shadow: 2px 0 4px $box-glow;
 }
+// DROPDOWN SUBHEADER
  #upcoming-selected-container {
-     display: -webkit-box;
-     display: -ms-flexbox;
      display: flex;
      position: fixed;
-     -webkit-box-pack: center;
-     -ms-flex-pack: center;
      justify-content: center;
      top: 0px;
      width: 100%;
@@ -168,6 +158,10 @@ $main-font-color:#595959;
          margin-top: 10%;
     }
 }
+
+// NAVBAR HEADER END
+
+// ABOUT BEGIN
  #about-container {
      margin-top: 16%;
      width: 100%;
@@ -193,142 +187,117 @@ $main-font-color:#595959;
          margin-top: 50%;
     }
 }
+
+// ABOUT END
+
+// ICO CONTAINER START 
+
  .ico-container {
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-     -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
-     flex-direction: column;
-     -webkit-box-pack: center;
-     -ms-flex-pack: center;
-     justify-content: center;
      align-items: center;
      margin-top: 4%;
      padding: 0;
-     width: 100%;
-     #ico-name-title {
-         width: 30.5%;
-         font-size: .9em;
-         font-weight: $font-bold;
-    }
-     #ico-description-title {
-         font-size: .9em;
-         font-weight: $font-bold;
-         border: red solid;
-    }
-     #ico-end-title {
-         font-size: .9em;
-         font-weight: $font-bold;
-    }
-     .ico-box {
-         border-radius: 2px;
-         background-color: $btn-bg-color;
-         height: 100%;
-         width: 100%;
-         margin: 2px 8px;
-         background-color: #e8e8e8;
-         display: flex;
-         .ico-name {
-             padding: 10px;
-             width: 18%;
-             display: flex;
-             justify-content: center;
-             align-items: center;
+     width: 100%; 
+
+    .ico-box {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $sub-header-bg-color;
+        width: 100%;
+        padding: 4px;
+        text-align: center;
+
+        img {
+
+            padding-top: 5px;
+            margin-bottom: 20px;
         }
-         .ico-description {
-             width: 50%;
-             padding: 10px 20px;
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             border-left: 2px #dadada solid;
-             border-right: 2px #dadada solid;
-             margin-top: 6px;
-             margin-bottom: 6px;
-             text-align: left;
-             font-weight: $font-extra-light;
+
+        p {
+
+            margin-bottom: 20px;
         }
-         .ico-end {
-             width: 10%;
-             padding: 10px;
-             display: flex;
-             jstify-content: center;
-             align-items: center;
-             font-weight: $font-extra-light;
-             font-size: .6em;
+
+        .ico-description {
+
+           width: 90%;
+           margin-left: 5%;
         }
-         div.ico-img {
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             padding: 8px 10px 8px 18px;
-             img {
-                 width: 130px;
+
+        .identifier {
+
+          font-size: .7em;
+          font-weight: 500;
+          color: #000;
+
+            p {
+
+              border-bottom: 1px solid #d8d8d8;
+              margin-bottom: 4px;
+              text-align: center;
             }
         }
-    }
-     .ico-alt-box {
-         background-color: $btn-bg-color;
-    }
-     .ico-box:hover {
-         -webkit-box-shadow: 0 0 10px $box-glow;
-         box-shadow: 0 0 10px $box-glow;
-         -webkit-transition: .3s;
-         transition: .3s;
-    }
+
+     }
 }
+
+ .ico-box.ico-alt-box {
+
+        background-color: $btn-bg-color;
+} 
+
+@media screen and (max-width: 414px) {
+  .ico-box {
+    flex-direction: column;
+  }
+
+  .ico-box p:nth-child(2), p:nth-child(3), p:nth-child(4) {
+
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 20px
+
+}
+
+.ico-box p:nth-child(2) {
+
+  text-align: center;
+ 
+}
+}
+
  @media screen and (max-width: 768px) {
-     .ico-container .ico-box {
-         height: 100%;
-    }
-}
- @media screen and (max-width: 414px) {
      .ico-container {
-         .list-title-hide {
-             display: none;
-        }
-         .ico-box {
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             padding: 10px 0;
-             .ico-name {
-                 width: 70%;
-            }
-             .ico-description {
-                 width: 70%;
-            }
-             .ico-end {
-                 width: 70%;
-                 display: flex;
-                 justify-content: center;
-            }
-        }
-    }
-}
- @media screen and (max-width: 414px) {
-     .ico-container .list-header {
-         display: none;
+         height: 100%;
     }
 }
  #upcoming-ico-list {
      display: none;
 }
+
+.bold-name {
+
+  font-weight: 400;
+  font-size: 1.3em
+}
+
+
+// ICO CONTAINER END
+
+// FOOTER BEGIN
+
  #footer-container {
-     display: -webkit-box;
-     display: -ms-flexbox;
      display: flex;
-     -webkit-box-pack: center;
-     -ms-flex-pack: center;
      justify-content: center;
 }
+
+// FOOTER END
+
+// POPUP DISCLAIMER 
  .popup-warning {
-     display: -webkit-box;
-     display: -ms-flexbox;
      display: flex;
-     -webkit-box-pack: center;
-     -ms-flex-pack: center;
      justify-content: center;
      position: fixed;
      top: 50%;
@@ -383,4 +352,6 @@ $main-font-color:#595959;
         }
     }
 }
+
+// END POPUP DISCLAIMER
  
