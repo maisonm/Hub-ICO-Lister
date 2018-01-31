@@ -101,54 +101,54 @@
                 <% if (i % 2 === 0) { %>
                 <div class="ico-box"> 
                     <div>
-                       <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
+                       <a target="_blank" href="<%= ico.upcoming[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
                     </div>
                     <div>
                         <span class="identifier">
                            <p> Name: </p>
                         </span>
-                         <p> <%= ico.live[i].name %> </p>
+                         <p> <%= ico.upcoming[i].name %> </p>
                         
                     </div>
                     <div>
                         <span class="identifier">
                             <p> Description: </p>
                         </span>
-                        <p class="ico-description"> <%= ico.live[i].description %> </p>
+                        <p class="ico-description"> <%= ico.upcoming[i].description %> </p>
                     </div>
                     <div>
                         <span class="identifier">
                             <p> Starting: </p>
                         </span>
                       
-                        <p>  <%= ico.live[i].start_time %> </p>
+                        <p>  <%= ico.upcoming[i].start_time %> </p>
                 
                     </div>
                 </div>
                 <% } else { %> 
                  <div class="ico-box ico-alt-box"> 
                     <div>
-                       <a target="_blank" href="<%= ico.live[i].website_link %>"> <img src="<%= ico.live[i].image %>"> </a>
+                       <a target="_blank" href="<%= ico.upcoming[i].website_link %>"> <img src="<%= ico.upcoming[i].image %>"> </a>
                     </div>
                     <div>
                         <span class="identifier">
                            <p> Name: </p>
                         </span>
-                         <p> <%= ico.live[i].name %> </p>
+                         <p> <%= ico.upcoming[i].name %> </p>
                         
                     </div>
                     <div>
                         <span class="identifier">
                             <p> Description: </p>
                         </span>
-                        <p class="ico-description"> <%= ico.live[i].description %> </p>
+                        <p class="ico-description"> <%= ico.upcoming[i].description %> </p>
                     </div>
                     <div>
                         <span class="identifier">
                             <p> Starting: </p>
                         </span>
                       
-                        <p>  <%= ico.live[i].start_time %> </p>
+                        <p>  <%= ico.upcoming[i].start_time %> </p>
                 
                     </div>
                 </div>
