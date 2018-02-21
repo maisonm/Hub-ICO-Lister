@@ -1,18 +1,5 @@
-$main-font-color:#595959;
- $dark-font-color:#5e6164;
- $super-dark-font-color:#333333;
- $red-warning:#FF686B;
- $green-ok:#0CF574;
- $sub-header-bg-color:#e0e0e0;
- $body-font-size:16px;
- $box-glow:#2e9ed8;
- $btn-bg-color:#fafafa;
- $font-mitr:'Mitr', sans-serif;
- $font-warning:'Heebo', sans-serif;
- $font-extra-light:200;
- $font-light:300;
- $font-regular:400;
- $font-bold:500;
+@import "variables.scss";
+
  * {
      margin: 0;
      padding: 0;
@@ -69,11 +56,11 @@ $main-font-color:#595959;
         }
          button:nth-child(1) {
              -webkit-box-shadow: 0 0 12px $box-glow;
-             box-shadow: 0 0 12px $box-glow;
+             box-shadow: 0 0 6px $box-glow;
         }
          button:hover {
              -webkit-box-shadow: 0 0 12px $box-glow;
-             box-shadow: 0 0 12px $box-glow;
+             box-shadow: 0 0 6px $box-glow;
              -webkit-transition: .3s;
              transition: .3s;
         }
@@ -197,6 +184,8 @@ $main-font-color:#595959;
      margin-top: 4%;
      padding: 0;
      width: 100%; 
+     display: flex;
+     flex-direction: column; 
 
     .ico-box {
 

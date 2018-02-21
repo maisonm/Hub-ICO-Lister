@@ -1,11 +1,9 @@
 $(document).ready(function () {
     warningFadeIn();
     subHeaderSlideDown();
+
 });
-$(window).click(function () {
-    warningfadeOut();
-})
-// Disclaimer Popup controls
+// Disclaimer Popup controls !!DISABLED¡¡
 function warningFadeIn() {
     setTimeout(function () {
         $('.popup-warning').fadeIn(400);
@@ -27,33 +25,41 @@ function subHeaderSlideDown() {
 }
 //
 // Header Navigation Buttons Glow & Sub-header Slide-outs
+
+const upcomingBtn = $('#upcoming-btn');
+const liveBtn = $('#live-btn');
+const upcomingSelectedContainer = $('#upcoming-selected-container');
+const liveSelectedContainer = $('#live-selected-container');
+const upcomingIcoList = $('#upcoming-ico-list');
+const liveIcoList = $('#live-ico-list');
+
 function liveBtnActive() {
-    $('#upcoming-btn').css("box-shadow", "none");
-    $('#live-btn').css("box-shadow", "0 0 12px #2e9ed8");
-    $('#upcoming-selected-container').css({
+    upcomingBtn.css("box-shadow", "none");
+    liveBtn.css("box-shadow", "0 0 12px #2e9ed8");
+    upcomingSelectedContainer.css({
         "top": "0px",
         "transition": ".7s"
     });
-    $('#live-selected-container').css({
+    liveSelectedContainer.css({
         "top": "70px",
         "transition": ".8s"
     });
-    $('#upcoming-ico-list').css("display", "none");
-    $('#live-ico-list').css("display", "flex");
+    upcomingIcoList.css("display", "none");
+    liveIcoList.css("display", "flex");
 }
 
 function upcomingBtnActive() {
-    $('#live-btn').css("box-shadow", "none");
-    $('#upcoming-btn').css("box-shadow", "0 0 12px #2e9ed8");
-    $('#upcoming-selected-container').css({
+    liveBtn.css("box-shadow", "none");
+    upcomingBtn.css("box-shadow", "0 0 12px #2e9ed8");
+    upcomingSelectedContainer.css({
         "top": "70px",
         "transition": ".8s"
     });
-    $('#live-selected-container').css({
+    liveSelectedContainer.css({
         "top": "0px",
         "transition": ".7s"
     });
-    $('#live-ico-list').css("display", "none");
-    $('#upcoming-ico-list').css("display", "flex");
+    liveIcoList.css("display", "none");
+    upcomingIcoList.css("display", "flex");
 }
 //
